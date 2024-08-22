@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+#section-banner {
+    min-height: 300px;
+}
+
+#section-banner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Promotion Section
+--------------------------------------------------------------*/
+.promotion-item {
+    background-color: var(--surface-color);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.promotion-item .promotion-img {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.promotion-item .promotion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.promotion-item .promotion-img:after {
+    position: relative;
+    content: "";
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    height: 100%;
+    background-color: var(--surface-color);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    z-index: 1;
+}
+
+.promotion-item .promotion-info {
+    padding: 10px 15px 20px 15px;
+}
+
+.promotion-item .promotion-info h4 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-family: var(--default-font);
+}
+
+.promotion-item .promotion-info span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.promotion-item .promotion-info p {
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 26px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.promotion-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.button-buy {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 14px 60px;
+    transition: 0.4s;
+    border-radius: 4px;
+}

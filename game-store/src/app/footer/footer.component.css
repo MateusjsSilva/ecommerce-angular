@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+    --heading-font: var(--default-font);
+    color: var(--footer-text-color);
+    background-color: var(--footer-color);
+    font-size: 0.9rem;
+    padding: 10px 0;
+    position: relative;
+}
+
+.footer .copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.developer{
+    color: var(--accent-color);
+}
