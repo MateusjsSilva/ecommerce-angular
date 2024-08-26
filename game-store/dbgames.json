@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "product": "A Plague Tale: Innocence",
+      "description": "O jogo segue a história de Amicia de Rune, uma jovem nobre, e seu irmão mais novo, Hugo. Após a invasão da Inquisição em sua casa, Amicia e Hugo são forçados a fugir e sobreviver em um mundo devastado pela peste e infestação de ratos. Além de escapar dos soldados da Inquisição, eles enfrentam hordas de ratos, que são uma representação sinistra da peste, destruindo tudo em seu caminho.",
+      "photo": "a_plague_tale.webp",
+      "price": 110
+    },
+    {
+      "id": "2",
+      "product": "A Plague Tale: Requiem",
+      "description": "Semelhante ao antecessor, Requiem é um jogo de ação e aventura jogado a partir de uma perspectiva de terceira pessoa. No jogo, o jogador assume o controle da personagem Amicia e deve enfrentar tanto soldados da Inquisição Francesa, quanto hordas de ratos famintos que estão espalhando a Peste Negra.",
+      "photo": "a_plague_tale_requiem.webp",
+      "price": 170
+    },
+    {
+      "id": "3",
+      "product": "The Witcher 3: Wild Hunt",
+      "description": "Baseado na série de livros de Andrzej Sapkowski, The Witcher é um RPG de ação desenvolvido pela CD Projekt RED. O jogo segue a história de Geralt de Rivia, um caçador de monstros habilidoso e um dos últimos Witchers restantes, um humano geneticamente aprimorado treinado desde a infância para lutar contra criaturas sobrenaturais.",
+      "photo": "the_witcher_3.webp",
+      "price": 250
+    }
+  ]
+}

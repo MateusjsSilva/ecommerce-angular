@@ -11,10 +11,12 @@
 }
 
 .footer .copyright {
-    padding-top: 20px;
+    padding-top: 40px;
+    border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
     padding-bottom: 20px;
 }
 
-.developer{
-    color: var(--accent-color);
+.developer {
+    color: color-mix(in srgb, var(--accent-color), transparent 30%);
+    font-weight: 500;
 }

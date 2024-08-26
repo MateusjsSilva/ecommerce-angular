@@ -9,9 +9,27 @@
             <ul>
                 <li><a href="#" class="active">Inicio</a></li>
                 <li><a href="#">Produtos</a></li>
+                <!-- Display only if user is logged in -->
+                <li class="dropdown" *ngIf="isLoggedIn">
+                    <a routerLink="restricted"><span>Admin</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        <li class="dropdown">
+                            <a routerLink="restricted/list"><span>Produtos</span>
+                                <i class="bi bi-chevron-down toggle-dropdown"></i>
+                            </a>
+                            <ul>
+                                <li><a routerLink="restricted/list">Lista de produtos</a></li>
+                                <li><a routerLink="restricted/register">Cadastrar produto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-        <a routerLink="login" class="btn-getstarted"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+        <a *ngIf="isLoggedIn" (click)="logout()" class="btn-getstarted"><i class="bi bi-box-arrow-in-left"></i>Logout</a>
+        <a *ngIf="!isLoggedIn" routerLink="login" class="btn-getstarted"><i class="bi bi-box-arrow-in-right"></i>Login</a>
     </div>
 </header>

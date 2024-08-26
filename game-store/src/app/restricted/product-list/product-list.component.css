@@ -1,0 +1,16 @@
+.table-responsive {
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em dispositivos móveis */
+}
+
+table img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.description {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

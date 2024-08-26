@@ -53,6 +53,10 @@ The main objectives of this project include:
   <img src="docs/img/img2.png" alt="homepage 2" height="400em">
 </div>
 
+<div align="center">
+  <img src="docs/img/img3.png" alt="adminpage" height="400em">
+</div>
+
 ## Contribution
 
 Feel free to open issues or submit pull requests. All contributions are welcome!

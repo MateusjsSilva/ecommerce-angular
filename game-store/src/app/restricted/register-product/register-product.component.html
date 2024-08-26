@@ -1,0 +1,32 @@
+<main>
+    <section id="section-cadastro" class="container pt-5">
+        <!-- Section Title -->
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+            <h2>Cadastrar produto</h2>
+        </div>
+        <!-- End Section Title -->
+        <div class="p-2">
+            <form>
+                <div class="pb-2">
+                    <label for="product">Nome do Produto</label>
+                    <input type="text" class="form-control" name="product" [(ngModel)]="product.product">
+                </div>
+                <div class="pb-2">
+                    <label for="description">Descrição</label>
+                    <input type="text" class="form-control" name="description" [(ngModel)]="product.description">
+                </div>
+                <div class="pb-2">
+                    <label for="photo">Foto</label>
+                    <input type="text" class="form-control" name="photo" [(ngModel)]="product.photo">
+                </div>
+                <div class="pb-2">
+                    <label for="price">Preço</label>
+                    <input type="number" class="form-control" name="price" [(ngModel)]="product.price">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary mb-3" (click)="register()">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>

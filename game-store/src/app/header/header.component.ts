@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor() { }
+
+  isLoggedIn: boolean = false;
+
+  constructor( private _router: Router, private _loginService: LoginService) { }
 
   ngOnInit(): void {
+
+    // Initialize the mobile menu functionality
     this.initializeMobileNavToggle();
+
+    // Subscribe to the Subject to receive login status
+    this._loginService.getShowMenu().subscribe((showMenu) => {
+      console.log('Show Menu Status:', showMenu);
+      this.isLoggedIn = showMenu;
+    });    
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this._loginService.setShowMenu(false);
+    this._router.navigate(['/login']);
   }
 
   initializeMobileNavToggle(): void {
@@ -36,4 +55,5 @@ export class HeaderComponent implements OnInit {
       });
     });
   }
+  
 }

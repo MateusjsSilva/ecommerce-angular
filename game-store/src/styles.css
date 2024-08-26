@@ -9,15 +9,15 @@
     --accent-color: #10AE20;
     --surface-color: #ffffff;
     --contrast-color: #ffffff;
-    --footer-color: #212529;
-    --footer-text-color: #ffffff;
+    --footer-color: #ffffff;
+    --footer-text-color: #212529;
 
     --nav-color: #7f7f90;
-    --nav-hover-color: #ce1212;
+    --nav-hover-color: #10AE20;
     --nav-mobile-background-color: #ffffff;
     --nav-dropdown-background-color: #ffffff;
     --nav-dropdown-color: #7f7f90;
-    --nav-dropdown-hover-color: #ce1212;
+    --nav-dropdown-hover-color: #10AE20;
 
     scroll-behavior: smooth;
 }
@@ -58,8 +58,8 @@ section,
 .section {
     color: var(--default-color);
     background-color: var(--background-color);
-    scroll-margin-top: 92px;
     overflow: clip;
+    margin-top: 20px;
     padding-bottom: 60px;
 }
 
