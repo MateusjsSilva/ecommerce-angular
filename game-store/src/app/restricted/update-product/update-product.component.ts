@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class UpdateProductComponent {
   
   public productId: number = 0;
-  public product: Product = new Product(0, "", "", "", 0);
+  public product: Product = new Product("","", "", "", 0);
   
   constructor(private _productService: ProductService, private _router: Router,
     private _activatedRoute: ActivatedRoute) {
@@ -19,10 +19,10 @@ export class UpdateProductComponent {
   }
   
   ngOnInit(): void {
-    this.listarProduct();
+    this.listProduct();
   }
-  
-  listarProduct(): void {
+
+  listProduct(): void {
     this._productService.getProduct(this.productId).subscribe(
       (res: any) => {
         this.product = new Product(
@@ -36,10 +36,10 @@ export class UpdateProductComponent {
     );
   }
   
-  update(id: number) {
+  update(id: any) {
     this._productService.updateProduct(id, this.product).subscribe(
-      product => { this.product = new Product(0, "", "", "", 0); },
-      err => { alert("Error updating"); }
+      product => { this.product = new Product("", "", "", "", 0); },
+      err => { alert("Erro ao atualizar"); }
     );
   
     this._router.navigate(["restricted/list"]);

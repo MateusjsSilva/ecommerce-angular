@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/Product.model';
-import { LoginService } from 'src/app/services/login.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -37,7 +36,7 @@ export class ProductListComponent implements OnInit {
     )
   }
   
-  delete(id: number) {
+  delete(id: any) {
     this._productService.removeProduct(id).subscribe(
       product => {
         this.listProducts();

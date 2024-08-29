@@ -10,14 +10,14 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class RegisterProductComponent {
 
-  public product: Product = new Product(0, "", "", "", 0);
+  public product: Product = new Product();
 
   constructor(private _productService: ProductService, private _router: Router) { }
 
   register(): void {
     this._productService.registerProduct(this.product).subscribe(
       product => {
-        this.product = new Product(0, "", "", "", 0);
+        this.product = new Product();
         alert("Cadastro Efetuado com sucesso");
       },
       err => {
@@ -27,5 +27,4 @@ export class RegisterProductComponent {
 
     this._router.navigate(["restricted/list"]);
   }
-
 }

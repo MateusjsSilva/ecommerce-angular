@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<main>
+    <section id="section-restricted" class="section" *ngIf="showSection">
+        <!-- Section Title -->
+        <div class="container section-title aos-init aos-animate pt-5 pb-2" data-aos="fade-up">
+            <h2>Área do Administrador</h2>
+        </div>
+        <!-- End Section Title -->
+        <div class="p-2">
+            <div class="d-flex flex-column align-items-center">
+                <div class="p-3">
+                    <a routerLink="list" class="btn d-block btn-primary">Listar Produtos</a>
+                </div>
+                <div class="p-3">
+                    <a routerLink="register" class="btn d-block btn-primary">Cadastrar Produto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <router-outlet></router-outlet>
+</main>

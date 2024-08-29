@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,16 +12,10 @@ export class LoginComponent {
   user: string = '';
   password: string = '';
 
-  constructor(private _loginService: LoginService, private _router: Router) { }
+  constructor(private _authService: AuthService, private _router: Router) { }
 
   login() {
-    this._loginService.login(this.user, this.password);
-
-    if (this._loginService.isLoggedIn()) {
-      this._loginService.setShowMenu(true);
-      this._router.navigate(['/restricted/list']);
-    } else {
-      this._loginService.setShowMenu(false);
-    }
+    this._authService.login(this.user, this.password);
+    this._router.navigate(['/restricted']);
   }
 }

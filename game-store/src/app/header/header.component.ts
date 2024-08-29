@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,49 +10,45 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn: boolean = false;
 
-  constructor( private _router: Router, private _loginService: LoginService) { }
+  constructor(private _authService: AuthService, private renderer: Renderer2) { }
 
   ngOnInit(): void {
-
-    // Initialize the mobile menu functionality
     this.initializeMobileNavToggle();
-
-    // Subscribe to the Subject to receive login status
-    this._loginService.getShowMenu().subscribe((showMenu) => {
-      console.log('Show Menu Status:', showMenu);
-      this.isLoggedIn = showMenu;
-    });    
+    
+    this._authService.getLoggedInStatus().subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
   }
 
-  logout(){
-    localStorage.removeItem('token');
-    this._loginService.setShowMenu(false);
-    this._router.navigate(['/login']);
+  logout() {
+    this._authService.logout();
   }
 
   initializeMobileNavToggle(): void {
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle') as HTMLElement;
+    // Wait until the DOM is fully loaded before attaching event listeners
+    setTimeout(() => {
+      const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle') as HTMLElement;
 
-    const mobileNavToggle = (): void => {
-      const body = document.querySelector('header') as HTMLElement;
+      const mobileNavToggle = (): void => {
+        const body = document.querySelector('header') as HTMLElement;
 
-      body.classList.toggle('mobile-nav-active');
-      mobileNavToggleBtn.classList.toggle('bi-list');
-      mobileNavToggleBtn.classList.toggle('bi-x');
-    };
+        body.classList.toggle('mobile-nav-active');
+        mobileNavToggleBtn.classList.toggle('bi-list');
+        mobileNavToggleBtn.classList.toggle('bi-x');
+      };
 
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
-    }
+      if (mobileNavToggleBtn) {
+        mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+      }
 
-    document.querySelectorAll('#navmenu a').forEach(navmenu => {
-      navmenu.addEventListener('click', () => {
-        const body = document.querySelector('body') as HTMLElement;
-        if (body.classList.contains('mobile-nav-active')) {
-          mobileNavToggle();
-        }
+      document.querySelectorAll('#navmenu a').forEach(navmenu => {
+        navmenu.addEventListener('click', () => {
+          const body = document.querySelector('body') as HTMLElement;
+          if (body.classList.contains('mobile-nav-active')) {
+            mobileNavToggle();
+          }
+        });
       });
-    });
+    }, 0); // Ensure DOM is loaded
   }
-  
 }

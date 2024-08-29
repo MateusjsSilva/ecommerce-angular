@@ -1,34 +1,32 @@
-<main>
-    <section id="section-update" class="container pt-5">
-        <!-- Section Title -->
-        <div class="container section-title aos-init aos-animate pt-5 pb-2" data-aos="fade-up">
-            <h2>Atualizar produto</h2>
-        </div>
-        <div class="p-2">
-            <form *ngIf="product">
-                <div class="mb-3">
-                    <label for="id" class="form-label">ID</label>
-                    <input type="number" id="id" class="form-control" name="id" [(ngModel)]="product.id" readonly>
-                </div>
-                <div class="mb-3">
-                    <label for="product" class="form-label">Nome do produto</label>
-                    <input type="text" id="product" class="form-control" name="product" [(ngModel)]="product.product">
-                </div>
-                <div class="mb-3">
-                    <label for="description" class="form-label">Descrição</label>
-                    <textarea id="description" class="form-control resize" name="description"
-                        [(ngModel)]="product.description"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="photo" class="form-label">Foto</label>
-                    <input type="text" id="photo" class="form-control" name="photo" [(ngModel)]="product.photo">
-                </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Preço</label>
-                    <input type="number" id="price" class="form-control" name="price" [(ngModel)]="product.price">
-                </div>
-                <button type="submit" class="btn btn-primary mb-3" (click)="update(product.id)">Update</button>
-            </form>
-        </div>
-    </section>
-</main>
+<section id="section-update" class="container pt-5">
+    <!-- Section Title -->
+    <div class="container section-title aos-init aos-animate pt-5 pb-2" data-aos="fade-up">
+        <h2>Atualizar produto</h2>
+    </div>
+    <div class="p-2">
+        <form *ngIf="product">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="text" id="id" class="form-control" name="id" [(ngModel)]="product.id" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="product" class="form-label">Nome do produto</label>
+                <input type="text" id="product" class="form-control" name="product" [(ngModel)]="product.product">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Descrição</label>
+                <textarea id="description" class="form-control resize" name="description"
+                    [(ngModel)]="product.description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Foto</label>
+                <input type="text" id="photo" class="form-control" name="photo" [(ngModel)]="product.photo">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Preço</label>
+                <input type="number" id="price" class="form-control" name="price" [(ngModel)]="product.price">
+            </div>
+            <button type="submit" class="btn btn-primary mb-3" (click)="update(product.id)">Update</button>
+        </form>
+    </div>
+</section>

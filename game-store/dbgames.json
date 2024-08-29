@@ -1,25 +1,46 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": "7aed",
       "product": "A Plague Tale: Innocence",
       "description": "O jogo segue a história de Amicia de Rune, uma jovem nobre, e seu irmão mais novo, Hugo. Após a invasão da Inquisição em sua casa, Amicia e Hugo são forçados a fugir e sobreviver em um mundo devastado pela peste e infestação de ratos. Além de escapar dos soldados da Inquisição, eles enfrentam hordas de ratos, que são uma representação sinistra da peste, destruindo tudo em seu caminho.",
       "photo": "a_plague_tale.webp",
-      "price": 110
+      "price": 120
     },
     {
-      "id": "2",
+      "id": "9008",
       "product": "A Plague Tale: Requiem",
       "description": "Semelhante ao antecessor, Requiem é um jogo de ação e aventura jogado a partir de uma perspectiva de terceira pessoa. No jogo, o jogador assume o controle da personagem Amicia e deve enfrentar tanto soldados da Inquisição Francesa, quanto hordas de ratos famintos que estão espalhando a Peste Negra.",
       "photo": "a_plague_tale_requiem.webp",
       "price": 170
     },
     {
-      "id": "3",
+      "id": "3e3c",
       "product": "The Witcher 3: Wild Hunt",
       "description": "Baseado na série de livros de Andrzej Sapkowski, The Witcher é um RPG de ação desenvolvido pela CD Projekt RED. O jogo segue a história de Geralt de Rivia, um caçador de monstros habilidoso e um dos últimos Witchers restantes, um humano geneticamente aprimorado treinado desde a infância para lutar contra criaturas sobrenaturais.",
       "photo": "the_witcher_3.webp",
       "price": 250
+    },
+    {
+      "id": "df9d",
+      "product": "Grand Theft Auto: San Andreas",
+      "description": "O jogo se passa em 1992, no estado fictício de San Andreas, que é baseado na Califórnia real. A história segue Carl “CJ” Johnson, um jovem negro que retorna à sua cidade natal, Los Santos, após a morte de seu pai. CJ encontra-se com sua família e amigos, mas logo descobre que a cidade está em guerra entre as gangues de rua, incluindo a Ballas e a Vagos.",
+      "photo": "grand_theft_auto_san_andreas.webp",
+      "price": 87
+    },
+    {
+      "id": "cd10",
+      "product": "GTA 5 (Grand Theft Auto V)",
+      "description": "A popular franquia de ladrão de carros teve em GTA 5 seu maior e mais realista mundo aberto já concebido. O game conta a história de três protagonistas: Michael, um ladrão saindo de sua aposentadoria, Franklin, que quer melhorar de vida através do crime, e Trevor, uma pessoa completamente descontrolada.",
+      "photo": "grand_theft_auto_v.webp",
+      "price": 260
+    },
+    {
+      "id": "1f1b",
+      "product": "Detroit: Become Human",
+      "description": "Um dos mais populares games da produtora Quantic Dream, Detroit: Become Human segue os moldes de um jogo de aventura focado em narrativa, o qual não exige tanta habilidade com o controle. O enredo se passa em um futuro no qual androides se tornaram comuns na sociedade e acompanha o ponto de vista de três desses robôs: Connor, um investigador policial, Kara, uma androide fugitiva, e Markus, um androide que ganha consciência e resolve liderar uma revolução.",
+      "photo": "detroit_become_humans.webp",
+      "price": 130
     }
   ]
 }

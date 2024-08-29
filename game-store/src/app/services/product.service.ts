@@ -22,7 +22,7 @@ export class ProductService {
   }
 
   registerProduct(product: Product): Observable<Product[]> {
-    return this._httpClient.post<Product[]>(this.url, product);
+    return this._httpClient.post<Product[]>(this.url, product)
   }
 
   updateProduct(id: any, product: Product): Observable<Product[]> {
